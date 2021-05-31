@@ -21,17 +21,17 @@
 
 	let externalCallbackFunction = null;
 		
-
+//добавляем слушателей события на инпуты
 	filtersForm.addEventListener('click', (evt) => {
 				evt.preventDefault();
 
 				if(typeof externalCallbackFunction === 'function') {
 					externalCallbackFunction(evt.target);
-				}
-				
-			});
+				}				
+	});
 	
-	let setCallback = function (cb) {
+	
+			let setCallback = function (cb) {
 			externalCallbackFunction = cb;
 	}
 
